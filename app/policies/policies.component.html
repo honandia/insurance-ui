@@ -1,0 +1,13 @@
+<h1>Policies</h1>
+<div class="list-group">
+    <a *ngFor="let policy of policies" href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">{{policy.id}}</h4>
+        <ul>
+            <li class="list-group-item-text">{{policy.amountInsured}}</li>
+            <li class="list-group-item-text">{{policy.email}}</li>
+            <li class="list-group-item-text">{{policy.inceptionDate}}</li>
+            <li class="list-group-item-text">{{policy.installmentPayment}}</li>
+            <li class="list-group-item-text">{{policy.clientId}}</li>
+        </ul>  
+    </a>
+</div>

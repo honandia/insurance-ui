@@ -1,0 +1,19 @@
+﻿<h1>Insurance UI</h1>
+<p>You're logged in!!</p>
+<p><a [routerLink]="['/login']">Logout</a></p>
+<h3>All clients:</h3>
+<div class="list-group">
+    <a *ngFor="let user of users" href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">{{user.name}}</h4>
+        <ul>
+            <li class="list-group-item-text">{{user.id}}</li>
+            <li class="list-group-item-text">{{user.email}}</li>
+            <li class="list-group-item-text">{{user.role}}</li>
+        </ul>
+        <!--<a (click)="goToUserPolicies(user.name)">View polillcies</a>-->
+        
+        <a [routerLink] = "['/policies', user.name]">View polillcies</a>
+        
+    </a>
+</div>
+    
